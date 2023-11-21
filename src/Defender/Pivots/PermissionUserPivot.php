@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Pivots;
+namespace GenesisTecnologia\Defender\Pivots;
 
 /**
  * Class PermissionUserPivot.

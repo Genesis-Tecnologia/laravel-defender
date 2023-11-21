@@ -1,10 +1,10 @@
 <?php
 
-namespace spec\Artesaos\Defender;
+namespace spec\GenesisTecnologia\Defender;
 
 use ArrayAccess;
-use Artesaos\Defender\Contracts\Repositories\PermissionRepository;
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\PermissionRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Foundation\Application;
@@ -42,7 +42,7 @@ class DefenderSpec extends ObjectBehavior
 
     public function it_should_return_true_when_the_given_role_exists(RoleRepository $roleRepository, $role)
     {
-        $role->beADoubleOf('Artesaos\Defender\Role');
+        $role->beADoubleOf('GenesisTecnologia\Defender\Role');
         $roleRepository->findByName('foo')->shouldBeCalled()->willReturn($role);
         $this->roleExists('foo')->shouldReturn(true);
     }
@@ -55,7 +55,7 @@ class DefenderSpec extends ObjectBehavior
 
     public function it_should_return_true_when_the_given_permission_exists(PermissionRepository $permissionRepository, $permission)
     {
-        $permission->beADoubleOf('Artesaos\Defender\Permission');
+        $permission->beADoubleOf('GenesisTecnologia\Defender\Permission');
         $permissionRepository->findByName('foo')->shouldBeCalled()->willReturn($permission);
         $this->permissionExists('foo')->shouldReturn(true);
     }

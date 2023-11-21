@@ -4,7 +4,7 @@ if (! function_exists('defender')) {
     /**
      * Get a defender instance.
      *
-     * @return \Artesaos\Defender\Defender
+     * @return \GenesisTecnologia\Defender\Defender
      */
     function defender()
     {

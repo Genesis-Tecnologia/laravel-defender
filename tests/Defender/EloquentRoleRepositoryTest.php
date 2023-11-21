@@ -1,9 +1,9 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
-use Artesaos\Defender\Role;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Role;
 use Illuminate\Database\Eloquent\Collection;
 
 /**
@@ -16,7 +16,7 @@ class EloquentRoleRepositoryTest extends AbstractTestCase
      * @var array
      */
     protected $providers = [
-        'Artesaos\Defender\Providers\DefenderServiceProvider',
+        'GenesisTecnologia\Defender\Providers\DefenderServiceProvider',
         'Orchestra\Database\ConsoleServiceProvider',
     ];
 
@@ -41,23 +41,23 @@ class EloquentRoleRepositoryTest extends AbstractTestCase
     public function testUserShouldHasRolesTrait()
     {
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\HasDefender',
-            'Artesaos\Defender\Testing\User'
+            'GenesisTecnologia\Defender\Traits\HasDefender',
+            'GenesisTecnologia\Defender\Testing\User'
         );
 
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\Users\HasRoles',
-            'Artesaos\Defender\Testing\User'
+            'GenesisTecnologia\Defender\Traits\Users\HasRoles',
+            'GenesisTecnologia\Defender\Testing\User'
         );
 
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\Permissions\RoleHasPermissions',
-            'Artesaos\Defender\Role'
+            'GenesisTecnologia\Defender\Traits\Permissions\RoleHasPermissions',
+            'GenesisTecnologia\Defender\Role'
         );
 
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\Permissions\InteractsWithPermissions',
-            'Artesaos\Defender\Role'
+            'GenesisTecnologia\Defender\Traits\Permissions\InteractsWithPermissions',
+            'GenesisTecnologia\Defender\Role'
         );
     }
 

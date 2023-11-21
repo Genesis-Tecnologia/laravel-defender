@@ -1,11 +1,10 @@
 {
-  "name": "Genesis-Tecnologia/laravel-defender",
+  "name": "genesis-tecnologia/laravel-defender",
   "description": "Roles & Permissions for Laravel",
   "license": "MIT",
   "require": {
     "php": ">=7.2.0 || ^8.0",
-    "laravel/framework": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
-    "phpspec/phpspec": "dev-main"
+    "laravel/framework": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.0 || ^9.0 || ^10.0",

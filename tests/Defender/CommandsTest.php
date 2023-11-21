@@ -7,10 +7,10 @@
  * Time: 01:01.
  */
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
-use Artesaos\Defender\Role;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Role;
 
 class CommandsTest extends AbstractTestCase
 {
@@ -39,7 +39,7 @@ class CommandsTest extends AbstractTestCase
     public function getPackageProviders($app)
     {
         return [
-            'Artesaos\Defender\Providers\DefenderServiceProvider',
+            'GenesisTecnologia\Defender\Providers\DefenderServiceProvider',
             'Orchestra\Database\ConsoleServiceProvider',
         ];
     }

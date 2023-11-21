@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Contracts\Repositories;
+namespace GenesisTecnologia\Defender\Contracts\Repositories;
 
 interface UserRepository extends AbstractRepository
 {

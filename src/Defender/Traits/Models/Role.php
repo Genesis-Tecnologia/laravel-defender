@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Traits\Models;
+namespace GenesisTecnologia\Defender\Traits\Models;
 
-use Artesaos\Defender\Traits\Permissions\RoleHasPermissions;
+use GenesisTecnologia\Defender\Traits\Permissions\RoleHasPermissions;
 
 /**
  * Trait Role.

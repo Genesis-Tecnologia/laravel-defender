@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Repositories\Eloquent;
+namespace GenesisTecnologia\Defender\Repositories\Eloquent;
 
-use Artesaos\Defender\Contracts\Repositories\AbstractRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\AbstractRepository;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Database\Eloquent\Model;
 

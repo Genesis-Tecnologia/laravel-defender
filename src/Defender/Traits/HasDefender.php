@@ -1,9 +1,9 @@
 <?php
 
-namespace Artesaos\Defender\Traits;
+namespace GenesisTecnologia\Defender\Traits;
 
-use Artesaos\Defender\Traits\Users\HasPermissions;
-use Artesaos\Defender\Traits\Users\HasRoles;
+use GenesisTecnologia\Defender\Traits\Users\HasPermissions;
+use GenesisTecnologia\Defender\Traits\Users\HasRoles;
 
 /**
  * Trait HasDefender.
@@ -180,7 +180,7 @@ trait HasDefender
      *
      * @param int $id
      *
-     * @return \Artesaos\Defender\Contracts\User
+     * @return \GenesisTecnologia\Defender\Contracts\User
      */
     public function findById($id)
     {

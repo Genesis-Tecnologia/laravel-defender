@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
 /**
  * Class DefenderTest.
@@ -12,7 +12,7 @@ class MigrationsTest extends AbstractTestCase
      * @var array
      */
     protected $providers = [
-        'Artesaos\Defender\Providers\DefenderServiceProvider',
+        'GenesisTecnologia\Defender\Providers\DefenderServiceProvider',
         'Orchestra\Database\ConsoleServiceProvider',
     ];
 

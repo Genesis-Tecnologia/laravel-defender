@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Facades;
+namespace GenesisTecnologia\Defender\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
