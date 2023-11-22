@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GenesisTecnologia\\LaravelDefender\\": "src/Defender/"
+      "GenesisTecnologia\\Defender\\": "src/Defender/"
     }
   },
   "config":{
