@@ -1,10 +1,10 @@
 <?php
 
-namespace Artesaos\Defender\Commands;
+namespace GenesisTecnologia\Defender\Commands;
 
-use Artesaos\Defender\Contracts\Repositories\PermissionRepository;
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
-use Artesaos\Defender\Contracts\Repositories\UserRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\PermissionRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\UserRepository;
 use Illuminate\Console\Command;
 
 /**
@@ -97,7 +97,7 @@ class MakePermission extends Command
      * @param string $name
      * @param string $readableName
      *
-     * @return \Artesaos\Defender\Permission
+     * @return \GenesisTecnologia\Defender\Permission
      */
     protected function createPermission($name, $readableName)
     {
@@ -112,7 +112,7 @@ class MakePermission extends Command
     /**
      * Attach Permission to user.
      *
-     * @param \Artesaos\Defender\Permission $permission
+     * @param \GenesisTecnologia\Defender\Permission $permission
      * @param int                           $userId
      */
     protected function attachPermissionToUser($permission, $userId)
@@ -127,7 +127,7 @@ class MakePermission extends Command
     }
 
     /**
-     * @param \Artesaos\Defender\Permission $permission
+     * @param \GenesisTecnologia\Defender\Permission $permission
      * @param string                           $roleName
      */
     protected function attachPermissionToRole($permission, $roleName)

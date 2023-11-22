@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Traits\Permissions;
+namespace GenesisTecnologia\Defender\Traits\Permissions;
 
 use Illuminate\Support\Arr;
 
@@ -12,7 +12,7 @@ trait InteractsWithPermissions
     /**
      * Attach the given permission.
      *
-     * @param array|\Artesaos\Defender\Permission $permission
+     * @param array|\GenesisTecnologia\Defender\Permission $permission
      * @param array                               $options
      */
     public function attachPermission($permission, array $options = [])
@@ -56,7 +56,7 @@ trait InteractsWithPermissions
     /**
      * Alias to the detachPermission method.
      *
-     * @param \Artesaos\Defender\Permission $permission
+     * @param \GenesisTecnologia\Defender\Permission $permission
      *
      * @return int
      */
@@ -68,7 +68,7 @@ trait InteractsWithPermissions
     /**
      * Detach the given permission from the model.
      *
-     * @param \Artesaos\Defender\Permission $permission
+     * @param \GenesisTecnologia\Defender\Permission $permission
      *
      * @return int
      */

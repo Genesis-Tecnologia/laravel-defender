@@ -1,10 +1,10 @@
 <?php
 
-namespace Artesaos\Defender\Repositories\Eloquent;
+namespace GenesisTecnologia\Defender\Repositories\Eloquent;
 
-use Artesaos\Defender\Contracts\Permission;
-use Artesaos\Defender\Contracts\Repositories\PermissionRepository;
-use Artesaos\Defender\Exceptions\PermissionExistsException;
+use GenesisTecnologia\Defender\Contracts\Permission;
+use GenesisTecnologia\Defender\Contracts\Repositories\PermissionRepository;
+use GenesisTecnologia\Defender\Exceptions\PermissionExistsException;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 

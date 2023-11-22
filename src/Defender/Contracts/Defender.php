@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Contracts;
+namespace GenesisTecnologia\Defender\Contracts;
 
 /**
  * Interface Defender.
@@ -86,7 +86,7 @@ interface Defender
      *
      * @param string $roleName
      *
-     * @return \Artesaos\Defender\Role|null
+     * @return \GenesisTecnologia\Defender\Role|null
      */
     public function findRole($roleName);
 
@@ -95,7 +95,7 @@ interface Defender
      *
      * @param int $roleId
      *
-     * @return \Artesaos\Defender\Role|null
+     * @return \GenesisTecnologia\Defender\Role|null
      */
     public function findRoleById($roleId);
 
@@ -104,7 +104,7 @@ interface Defender
      *
      * @param string $permissionName
      *
-     * @return \Artesaos\Defender\Permission|null
+     * @return \GenesisTecnologia\Defender\Permission|null
      */
     public function findPermission($permissionName);
 
@@ -113,7 +113,7 @@ interface Defender
      *
      * @param int $permissionId
      *
-     * @return \Artesaos\Defender\Permission|null
+     * @return \GenesisTecnologia\Defender\Permission|null
      */
     public function findPermissionById($permissionId);
 
@@ -133,7 +133,7 @@ interface Defender
      *
      * @param string $roleName
      *
-     * @return \Artesaos\Defender\Role
+     * @return \GenesisTecnologia\Defender\Role
      */
     public function createRole($roleName);
 
@@ -141,12 +141,12 @@ interface Defender
      * @param string $permissionName
      * @param string $readableName
      *
-     * @return \Artesaos\Defender\Permission
+     * @return \GenesisTecnologia\Defender\Permission
      */
     public function createPermission($permissionName, $readableName = null);
 
     /**
-     * @return \Artesaos\Defender\Javascript
+     * @return \GenesisTecnologia\Defender\Javascript
      */
     public function javascript();
 }

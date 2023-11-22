@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Exceptions;
+namespace GenesisTecnologia\Defender\Exceptions;
 
 /**
  * Class RoleExistsException.

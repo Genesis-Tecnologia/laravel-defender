@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Role;
+use GenesisTecnologia\Defender\Role;
 use Illuminate\Database\Seeder;
 
 /**

@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Middlewares;
+namespace GenesisTecnologia\Defender\Middlewares;
 
-use Artesaos\Defender\Contracts\ForbiddenHandler;
+use GenesisTecnologia\Defender\Contracts\ForbiddenHandler;
 use Illuminate\Support\Arr;
 
 /**

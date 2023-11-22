@@ -1,9 +1,9 @@
 <?php
 
-namespace Artesaos\Defender\Commands;
+namespace GenesisTecnologia\Defender\Commands;
 
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
-use Artesaos\Defender\Contracts\Repositories\UserRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\UserRepository;
 use Illuminate\Console\Command;
 
 /**
@@ -75,7 +75,7 @@ class MakeRole extends Command
      *
      * @param string $roleName
      *
-     * @return \Artesaos\Defender\Role
+     * @return \GenesisTecnologia\Defender\Role
      */
     protected function createRole($roleName)
     {
@@ -90,7 +90,7 @@ class MakeRole extends Command
     /**
      * Attach role to user.
      *
-     * @param \Artesaos\Defender\Role $role
+     * @param \GenesisTecnologia\Defender\Role $role
      * @param int                     $userId
      */
     protected function attachRoleToUser($role, $userId)

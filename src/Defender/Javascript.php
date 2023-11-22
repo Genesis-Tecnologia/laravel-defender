@@ -1,9 +1,9 @@
 <?php
 
-namespace Artesaos\Defender;
+namespace GenesisTecnologia\Defender;
 
-use Artesaos\Defender\Contracts\Javascript as JavascriptContract;
-use Artesaos\Defender\Traits\HasDefender;
+use GenesisTecnologia\Defender\Contracts\Javascript as JavascriptContract;
+use GenesisTecnologia\Defender\Traits\HasDefender;
 
 /**
  * Class Javascript.

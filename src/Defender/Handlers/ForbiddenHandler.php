@@ -1,9 +1,9 @@
 <?php
 
-namespace Artesaos\Defender\Handlers;
+namespace GenesisTecnologia\Defender\Handlers;
 
-use Artesaos\Defender\Contracts\ForbiddenHandler as ForbiddenHandlerContract;
-use Artesaos\Defender\Exceptions\ForbiddenException;
+use GenesisTecnologia\Defender\Contracts\ForbiddenHandler as ForbiddenHandlerContract;
+use GenesisTecnologia\Defender\Exceptions\ForbiddenException;
 
 class ForbiddenHandler implements ForbiddenHandlerContract
 {

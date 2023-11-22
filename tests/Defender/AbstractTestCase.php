@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
 use Orchestra\Testbench\TestCase;
 
@@ -121,9 +121,9 @@ abstract class AbstractTestCase extends TestCase
             'prefix' => '',
         ]);
 
-        $app['config']->set('defender.user_model', 'Artesaos\Defender\Testing\User');
-        $app['config']->set('defender.role_model', 'Artesaos\Defender\Role');
-        $app['config']->set('defender.permission_model', 'Artesaos\Defender\Permission');
+        $app['config']->set('defender.user_model', 'GenesisTecnologia\Defender\Testing\User');
+        $app['config']->set('defender.role_model', 'GenesisTecnologia\Defender\Role');
+        $app['config']->set('defender.permission_model', 'GenesisTecnologia\Defender\Permission');
         $app['config']->set('auth.model', $app['config']->get('defender.user_model'));
     }
 

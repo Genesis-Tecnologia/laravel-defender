@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Middlewares;
+namespace GenesisTecnologia\Defender\Middlewares;
 
 use Closure;
 use Illuminate\Support\Arr;

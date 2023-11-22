@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
 use Illuminate\Database\Seeder;
 

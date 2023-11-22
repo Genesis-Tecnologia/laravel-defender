@@ -1,10 +1,10 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Permission;
-use Artesaos\Defender\Repositories\Eloquent\EloquentPermissionRepository;
-use Artesaos\Defender\Role;
+use GenesisTecnologia\Defender\Permission;
+use GenesisTecnologia\Defender\Repositories\Eloquent\EloquentPermissionRepository;
+use GenesisTecnologia\Defender\Role;
 
 /**
  * Class EloquentPermissionRepositoryTest.
@@ -16,7 +16,7 @@ class EloquentPermissionRepositoryTest extends AbstractTestCase
      * @var array
      */
     protected $providers = [
-        'Artesaos\Defender\Providers\DefenderServiceProvider',
+        'GenesisTecnologia\Defender\Providers\DefenderServiceProvider',
         'Orchestra\Database\ConsoleServiceProvider',
     ];
 
@@ -44,18 +44,18 @@ class EloquentPermissionRepositoryTest extends AbstractTestCase
     public function testUserShouldHasPermissionsTrait()
     {
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\HasDefender',
-            'Artesaos\Defender\Testing\User'
+            'GenesisTecnologia\Defender\Traits\HasDefender',
+            'GenesisTecnologia\Defender\Testing\User'
         );
 
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\Permissions\InteractsWithPermissions',
-            'Artesaos\Defender\Testing\User'
+            'GenesisTecnologia\Defender\Traits\Permissions\InteractsWithPermissions',
+            'GenesisTecnologia\Defender\Testing\User'
         );
 
         $this->assertUsingTrait(
-            'Artesaos\Defender\Traits\Users\HasPermissions',
-            'Artesaos\Defender\Testing\User'
+            'GenesisTecnologia\Defender\Traits\Users\HasPermissions',
+            'GenesisTecnologia\Defender\Testing\User'
         );
     }
 
@@ -81,7 +81,7 @@ class EloquentPermissionRepositoryTest extends AbstractTestCase
         $this->assertTrue($user->existPermission('users.delete'));
 
         $this->assertInstanceOf(
-            'Artesaos\Defender\Pivots\PermissionUserPivot',
+            'GenesisTecnologia\Defender\Pivots\PermissionUserPivot',
             $user->permissions->first()->pivot
         );
     }
@@ -102,7 +102,7 @@ class EloquentPermissionRepositoryTest extends AbstractTestCase
         $this->assertTrue($permission->roles()->get()->contains($role->id));
 
         $this->assertInstanceOf(
-            'Artesaos\Defender\Pivots\PermissionRolePivot',
+            'GenesisTecnologia\Defender\Pivots\PermissionRolePivot',
             $role->permissions->first()->pivot
         );
     }

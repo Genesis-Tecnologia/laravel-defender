@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender;
+namespace GenesisTecnologia\Defender;
 
 use Illuminate\Database\Eloquent\Model;
 

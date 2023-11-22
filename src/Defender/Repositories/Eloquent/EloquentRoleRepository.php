@@ -1,10 +1,10 @@
 <?php
 
-namespace Artesaos\Defender\Repositories\Eloquent;
+namespace GenesisTecnologia\Defender\Repositories\Eloquent;
 
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
-use Artesaos\Defender\Contracts\Role;
-use Artesaos\Defender\Exceptions\RoleExistsException;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Contracts\Role;
+use GenesisTecnologia\Defender\Exceptions\RoleExistsException;
 use Illuminate\Contracts\Foundation\Application;
 
 /**

@@ -63,14 +63,14 @@ You need to update your application configuration in order to register the packa
 // file START ommited
     'providers' => [
         // other providers ommited
-        \Artesaos\Defender\Providers\DefenderServiceProvider::class,
+        \GenesisTecnologia\Defender\Providers\DefenderServiceProvider::class,
     ],
 // file END ommited
 ```
 
 ### 3. User Class
 
-On your User class, add the trait `Artesaos\Defender\Traits\HasDefender` to enable the creation of permissions and roles:
+On your User class, add the trait `GenesisTecnologia\Defender\Traits\HasDefender` to enable the creation of permissions and roles:
 
 ```php
 <?php
@@ -79,7 +79,7 @@ namespace App;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Artesaos\Defender\Traits\HasDefender;
+use GenesisTecnologia\Defender\Traits\HasDefender;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
@@ -97,7 +97,7 @@ If you are using laravel 5.2+, there is a small difference:
 
 namespace App;
 
-use Artesaos\Defender\Traits\HasDefender;
+use GenesisTecnologia\Defender\Traits\HasDefender;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -140,7 +140,7 @@ In order to use the `Defender` facade, you need to register it on the `config/ap
 // file START ommited
     'aliases' => [
         // other Facades ommited
-        'Defender' => \Artesaos\Defender\Facades\Defender::class,
+        'Defender' => \GenesisTecnologia\Defender\Facades\Defender::class,
     ],
 // file END ommited
 ```
@@ -156,10 +156,10 @@ protected $routeMiddleware = [
     'guest'           => \App\Http\Middleware\RedirectIfAuthenticated::class,
 
     // Access control using permissions
-    'needsPermission' => \Artesaos\Defender\Middlewares\NeedsPermissionMiddleware::class,
+    'needsPermission' => \GenesisTecnologia\Defender\Middlewares\NeedsPermissionMiddleware::class,
 
     // Simpler access control, uses only the groups
-    'needsRole' => \Artesaos\Defender\Middlewares\NeedsRoleMiddleware::class
+    'needsRole' => \GenesisTecnologia\Defender\Middlewares\NeedsRoleMiddleware::class
 ];
 ```
 
@@ -529,7 +529,7 @@ To add the Defender's features, you need to add the trait `HasDefender` in you U
 <?php namespace App;
 
 // Declaration of other omitted namespaces
-use Artesaos\Defender\Traits\HasDefender;
+use GenesisTecnologia\Defender\Traits\HasDefender;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -571,7 +571,7 @@ public function foo(Authenticable $user)
 
 ##### `public function attachRole($role)`:
 
-Attach the user to the role `$role`. The `$role` variable might be an object of the type `Artesaos\Defender\Role` or an array containing the `ids` of the roles.
+Attach the user to the role `$role`. The `$role` variable might be an object of the type `GenesisTecnologia\Defender\Role` or an array containing the `ids` of the roles.
 
 ```php
 public function foo(Authenticable $user)
@@ -625,7 +625,7 @@ public function foo(Authenticable $user)
 
 ##### `public function attachPermission($permission, array $options = array())`:
 
-Attach the user to the permission `$permission`. The `$permission` variable is an instance of the `Artesaos\Defender\Permission` class.
+Attach the user to the permission `$permission`. The `$permission` variable is an instance of the `GenesisTecnologia\Defender\Permission` class.
 
 ```php
 public function foo(Authenticable $user)
@@ -642,7 +642,7 @@ public function foo(Authenticable $user)
 
 ##### `public function detachPermission($permission)`:
 
-Remove the permission `$permission` from the user. The `$permission` variable might be an instance of the `Artesaos\Defender\Permission` class or an array of `ids` with the ids of the permissions to be removed.
+Remove the permission `$permission` from the user. The `$permission` variable might be an instance of the `GenesisTecnologia\Defender\Permission` class or an array of `ids` with the ids of the permissions to be removed.
 
 ```php
 public function foo(Authenticable $user)
@@ -768,8 +768,8 @@ Following are two examples of how Role and Permission models must be implemented
     namespace App;
     
     use Jenssegers\Mongodb\Eloquent\Model;
-    use Artesaos\Defender\Traits\Models\Role;
-    use Artesaos\Defender\Contracts\Role as RoleInterface;
+    use GenesisTecnologia\Defender\Traits\Models\Role;
+    use GenesisTecnologia\Defender\Contracts\Role as RoleInterface;
     
     /**
      * Class Role.
@@ -787,8 +787,8 @@ Following are two examples of how Role and Permission models must be implemented
     namespace App;
     
     use Jenssegers\Mongodb\Eloquent\Model;
-    use Artesaos\Defender\Traits\Models\Permission;
-    use Artesaos\Defender\Contracts\Permission as PermissionInterface;
+    use GenesisTecnologia\Defender\Traits\Models\Permission;
+    use GenesisTecnologia\Defender\Contracts\Permission as PermissionInterface;
     
     /**
      * Class Permission.

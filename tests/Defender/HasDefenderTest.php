@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Permission;
+use GenesisTecnologia\Defender\Permission;
 
 /**
  * Class HasDefenderTest.
@@ -14,7 +14,7 @@ class HasDefenderTest extends AbstractTestCase
      * @var array
      */
     protected $providers = [
-        'Artesaos\Defender\Providers\DefenderServiceProvider',
+        'GenesisTecnologia\Defender\Providers\DefenderServiceProvider',
     ];
 
     /**

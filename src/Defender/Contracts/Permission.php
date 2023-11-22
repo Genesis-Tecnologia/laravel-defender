@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Contracts;
+namespace GenesisTecnologia\Defender\Contracts;
 
-use Artesaos\Defender\Pivots\PermissionUserPivot;
+use GenesisTecnologia\Defender\Pivots\PermissionUserPivot;
 use Illuminate\Database\Eloquent\Model;
 
 /**

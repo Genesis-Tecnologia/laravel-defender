@@ -1,9 +1,9 @@
 <?php
 
-namespace Artesaos\Defender\Traits\Models;
+namespace GenesisTecnologia\Defender\Traits\Models;
 
-use Artesaos\Defender\Pivots\PermissionRolePivot;
-use Artesaos\Defender\Pivots\PermissionUserPivot;
+use GenesisTecnologia\Defender\Pivots\PermissionRolePivot;
+use GenesisTecnologia\Defender\Pivots\PermissionUserPivot;
 use Illuminate\Database\Eloquent\Model;
 
 /**

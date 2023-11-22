@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Contracts\Repositories;
+namespace GenesisTecnologia\Defender\Contracts\Repositories;
 
 /**
  * Interface PermissionRepository.
@@ -13,9 +13,9 @@ interface PermissionRepository extends AbstractRepository
      * @param string $permissionName
      * @param string $readableName
      *
-     * @throws \Artesaos\Defender\Exceptions\PermissionExistsException
+     * @throws \GenesisTecnologia\Defender\Exceptions\PermissionExistsException
      *
-     * @return \Artesaos\Defender\Permission;
+     * @return \GenesisTecnologia\Defender\Permission;
      */
     public function create($permissionName, $readableName = null);
 

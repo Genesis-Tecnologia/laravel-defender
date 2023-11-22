@@ -1,10 +1,10 @@
 <?php
 
-namespace Artesaos\Defender;
+namespace GenesisTecnologia\Defender;
 
-use Artesaos\Defender\Contracts\Defender as DefenderContract;
-use Artesaos\Defender\Contracts\Repositories\PermissionRepository;
-use Artesaos\Defender\Contracts\Repositories\RoleRepository;
+use GenesisTecnologia\Defender\Contracts\Defender as DefenderContract;
+use GenesisTecnologia\Defender\Contracts\Repositories\PermissionRepository;
+use GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository;
 use Illuminate\Contracts\Foundation\Application;
 
 /**
@@ -191,7 +191,7 @@ class Defender implements DefenderContract
      *
      * @param string $roleName
      *
-     * @return \Artesaos\Defender\Role|null
+     * @return \GenesisTecnologia\Defender\Role|null
      */
     public function findRole($roleName)
     {
@@ -215,7 +215,7 @@ class Defender implements DefenderContract
      *
      * @param string $permissionName
      *
-     * @return \Artesaos\Defender\Permission|null
+     * @return \GenesisTecnologia\Defender\Permission|null
      */
     public function findPermission($permissionName)
     {
@@ -227,7 +227,7 @@ class Defender implements DefenderContract
      *
      * @param int $permissionId
      *
-     * @return \Artesaos\Defender\Permission|null
+     * @return \GenesisTecnologia\Defender\Permission|null
      */
     public function findPermissionById($permissionId)
     {
@@ -256,7 +256,7 @@ class Defender implements DefenderContract
      *
      * @param string $roleName
      *
-     * @return \Artesaos\Defender\Role
+     * @return \GenesisTecnologia\Defender\Role
      */
     public function createRole($roleName)
     {

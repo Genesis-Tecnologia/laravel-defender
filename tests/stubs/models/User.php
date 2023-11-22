@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Traits\HasDefender;
+use GenesisTecnologia\Defender\Traits\HasDefender;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;

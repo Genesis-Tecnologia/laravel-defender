@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Traits\Users;
+namespace GenesisTecnologia\Defender\Traits\Users;
 
 /**
  * Trait HasRoles.
@@ -44,7 +44,7 @@ trait HasRoles
     /**
      * Attach the given role.
      *
-     * @param \Artesaos\Defender\Role $role
+     * @param \GenesisTecnologia\Defender\Role $role
      */
     public function attachRole($role)
     {
@@ -60,7 +60,7 @@ trait HasRoles
      */
     public function roles()
     {
-        $roleModel = config('defender.role_model', 'Artesaos\Defender\Role');
+        $roleModel = config('defender.role_model', 'GenesisTecnologia\Defender\Role');
         $roleUserTable = config('defender.role_user_table', 'role_user');
         $roleKey = config('defender.role_key', 'role_id');
 
@@ -70,7 +70,7 @@ trait HasRoles
     /**
      * Detach the given role from the model.
      *
-     * @param \Artesaos\Defender\Role $role
+     * @param \GenesisTecnologia\Defender\Role $role
      *
      * @return int
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
 use Illuminate\Support\Facades\Blade;
 
@@ -14,7 +14,7 @@ class DefenderServiceProviderTest extends AbstractTestCase
      * @var array
      */
     protected $providers = [
-        'Artesaos\Defender\Providers\DefenderServiceProvider',
+        'GenesisTecnologia\Defender\Providers\DefenderServiceProvider',
     ];
 
     /**
@@ -28,9 +28,9 @@ class DefenderServiceProviderTest extends AbstractTestCase
 
     public function testModelBindings()
     {
-        $this->assertInstanceOf('Artesaos\Defender\Role', $this->app->make('Artesaos\Defender\Contracts\Role'));
+        $this->assertInstanceOf('GenesisTecnologia\Defender\Role', $this->app->make('GenesisTecnologia\Defender\Contracts\Role'));
 
-        $this->assertInstanceOf('Artesaos\Defender\Permission', $this->app->make('Artesaos\Defender\Contracts\Permission'));
+        $this->assertInstanceOf('GenesisTecnologia\Defender\Permission', $this->app->make('GenesisTecnologia\Defender\Contracts\Permission'));
     }
 
     /**
@@ -40,23 +40,23 @@ class DefenderServiceProviderTest extends AbstractTestCase
     {
         $contracts = [
             [
-                'interface' => 'Artesaos\Defender\Contracts\Defender',
-                'implementation' => 'Artesaos\Defender\Defender',
+                'interface' => 'GenesisTecnologia\Defender\Contracts\Defender',
+                'implementation' => 'GenesisTecnologia\Defender\Defender',
                 'alias' => 'defender',
             ],
             [
-                'interface' => 'Artesaos\Defender\Contracts\Javascript',
-                'implementation' => 'Artesaos\Defender\Javascript',
+                'interface' => 'GenesisTecnologia\Defender\Contracts\Javascript',
+                'implementation' => 'GenesisTecnologia\Defender\Javascript',
                 'alias' => 'defender.javascript',
             ],
             [
-                'interface' => 'Artesaos\Defender\Contracts\Repositories\PermissionRepository',
-                'implementation' => 'Artesaos\Defender\Repositories\Eloquent\EloquentPermissionRepository',
+                'interface' => 'GenesisTecnologia\Defender\Contracts\Repositories\PermissionRepository',
+                'implementation' => 'GenesisTecnologia\Defender\Repositories\Eloquent\EloquentPermissionRepository',
                 'alias' => 'defender.permission',
             ],
             [
-                'interface' => 'Artesaos\Defender\Contracts\Repositories\RoleRepository',
-                'implementation' => 'Artesaos\Defender\Repositories\Eloquent\EloquentRoleRepository',
+                'interface' => 'GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository',
+                'implementation' => 'GenesisTecnologia\Defender\Repositories\Eloquent\EloquentRoleRepository',
                 'alias' => 'defender.role',
             ],
         ];
@@ -98,7 +98,7 @@ class DefenderServiceProviderTest extends AbstractTestCase
     {
         $this->app['config']->set('defender.template_helpers', false);
 
-        $this->app->register('Artesaos\Defender\Providers\DefenderServiceProvider');
+        $this->app->register('GenesisTecnologia\Defender\Providers\DefenderServiceProvider');
 
         $view = $this->stubsPath('views/defender.blade.txt');
         $expected = $this->stubsPath('views/defender.blade.output.txt');
@@ -139,7 +139,7 @@ class DefenderServiceProviderTest extends AbstractTestCase
 
         $this->app['config']->set('defender.helpers', false);
 
-        $this->app->register('Artesaos\Defender\Providers\DefenderServiceProvider');
+        $this->app->register('GenesisTecnologia\Defender\Providers\DefenderServiceProvider');
 
         if ($this->isInIsolation()) {
             $this->assertFalse(function_exists('defender'), 'Helper \'defender()\' loaded.');

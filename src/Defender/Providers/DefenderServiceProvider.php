@@ -1,11 +1,11 @@
 <?php
 
-namespace Artesaos\Defender\Providers;
+namespace GenesisTecnologia\Defender\Providers;
 
-use Artesaos\Defender\Defender;
-use Artesaos\Defender\Repositories\Eloquent\EloquentPermissionRepository;
-use Artesaos\Defender\Repositories\Eloquent\EloquentRoleRepository;
-use Artesaos\Defender\Repositories\Eloquent\EloquentUserRepository;
+use GenesisTecnologia\Defender\Defender;
+use GenesisTecnologia\Defender\Repositories\Eloquent\EloquentPermissionRepository;
+use GenesisTecnologia\Defender\Repositories\Eloquent\EloquentRoleRepository;
+use GenesisTecnologia\Defender\Repositories\Eloquent\EloquentUserRepository;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
@@ -48,9 +48,9 @@ class DefenderServiceProvider extends ServiceProvider
             return $app['defender']->javascript();
         });
 
-        $this->app->alias('defender', 'Artesaos\Defender\Contracts\Defender');
+        $this->app->alias('defender', 'GenesisTecnologia\Defender\Contracts\Defender');
 
-        $this->app->alias('defender.javascript', 'Artesaos\Defender\Contracts\Javascript');
+        $this->app->alias('defender.javascript', 'GenesisTecnologia\Defender\Contracts\Javascript');
 
         $this->registerRepositoryInterfaces();
 
@@ -76,26 +76,26 @@ class DefenderServiceProvider extends ServiceProvider
      */
     protected function registerRepositoryInterfaces()
     {
-        $this->app->bind('Artesaos\Defender\Contracts\Permission', function ($app) {
+        $this->app->bind('GenesisTecnologia\Defender\Contracts\Permission', function ($app) {
             return $app->make($this->app['config']->get('defender.permission_model'));
         });
-        $this->app->bind('Artesaos\Defender\Contracts\Role', function ($app) {
+        $this->app->bind('GenesisTecnologia\Defender\Contracts\Role', function ($app) {
             return $app->make($this->app['config']->get('defender.role_model'));
         });
 
         $this->app->singleton('defender.role', function ($app) {
-            return new EloquentRoleRepository($app, $app->make(\Artesaos\Defender\Contracts\Role::class));
+            return new EloquentRoleRepository($app, $app->make(\GenesisTecnologia\Defender\Contracts\Role::class));
         });
 
-        $this->app->singleton('Artesaos\Defender\Contracts\Repositories\RoleRepository', function ($app) {
+        $this->app->singleton('GenesisTecnologia\Defender\Contracts\Repositories\RoleRepository', function ($app) {
             return $app['defender.role'];
         });
 
         $this->app->singleton('defender.permission', function ($app) {
-            return new EloquentPermissionRepository($app, $app->make(\Artesaos\Defender\Contracts\Permission::class));
+            return new EloquentPermissionRepository($app, $app->make(\GenesisTecnologia\Defender\Contracts\Permission::class));
         });
 
-        $this->app->singleton('Artesaos\Defender\Contracts\Repositories\PermissionRepository', function ($app) {
+        $this->app->singleton('GenesisTecnologia\Defender\Contracts\Repositories\PermissionRepository', function ($app) {
             return $app['defender.permission'];
         });
 
@@ -105,7 +105,7 @@ class DefenderServiceProvider extends ServiceProvider
             return new EloquentUserRepository($app, $app->make($userModel));
         });
 
-        $this->app->singleton('Artesaos\Defender\Contracts\Repositories\UserRepository', function ($app) {
+        $this->app->singleton('GenesisTecnologia\Defender\Contracts\Repositories\UserRepository', function ($app) {
             return $app['defender.user'];
         });
     }
@@ -192,8 +192,8 @@ class DefenderServiceProvider extends ServiceProvider
      */
     private function registerCommands()
     {
-        $this->commands('Artesaos\Defender\Commands\MakeRole');
-        $this->commands('Artesaos\Defender\Commands\MakePermission');
+        $this->commands('GenesisTecnologia\Defender\Commands\MakeRole');
+        $this->commands('GenesisTecnologia\Defender\Commands\MakePermission');
     }
 
     /**

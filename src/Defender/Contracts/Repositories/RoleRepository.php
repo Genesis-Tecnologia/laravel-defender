@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Contracts\Repositories;
+namespace GenesisTecnologia\Defender\Contracts\Repositories;
 
 /**
  * Interface RoleRepository.
@@ -14,7 +14,7 @@ interface RoleRepository extends AbstractRepository
      *
      * @throws \Exception
      *
-     * @return \Artesaos\Defender\Role
+     * @return \GenesisTecnologia\Defender\Role
      */
     public function create($roleName);
 }

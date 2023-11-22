@@ -1,6 +1,6 @@
 <?php
 
-namespace Artesaos\Defender\Contracts;
+namespace GenesisTecnologia\Defender\Contracts;
 
 interface ForbiddenHandler
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Artesaos\Defender\Testing;
+namespace GenesisTecnologia\Defender\Testing;
 
-use Artesaos\Defender\Defender as BaseDefender;
+use GenesisTecnologia\Defender\Defender as BaseDefender;
 
 /**
  * Class Defender.
